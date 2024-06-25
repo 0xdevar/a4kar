@@ -1,7 +1,7 @@
 import { Client, Partials } from 'discord.js'
 import { colours, emojis  } from './utils/logger'
 import { commandsHandler , eventsHandler } from './utils/handlers'
-import { ensureEnv } from './utils/envValidator.ts'
+import { ensureEnv } from './utils/envValidator'
 
 const client = new Client({
     intents: 32767,

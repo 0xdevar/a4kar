@@ -2,9 +2,9 @@ import type { Client } from 'discord.js';
 import { ensureEnv } from '../../utils/envValidator';
 import { colours, emojis } from '../../utils/logger';
 
-module.exports = (client: Client) => {
+export default (client:Client) => {
     if (client.user) {
-        console.log(colours.green, `[${emojis.success}] Logged in with ${client.user.tag}`);
+        console.log(colours.green, `[${emojis.success}] Logged in with ${client.user.tag}`, colours.reset);
     } else {
         console.log(colours.red, `[${emojis.error}] Client user is null`, colours.reset);
         process.exit(1);
